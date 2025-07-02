@@ -1,0 +1,22 @@
+{
+  "name": "express-smart-throttle",
+  "version": "0.0.1",
+  "description": "Advanced Express middleware for rate-limiting and throttling with per-route, per-role limits, delay-after, and Redis support.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "rate-limiter",
+    "rate-limiting",
+    "express-middleware",
+    "throttle",
+    "redis",
+    "adaptive",
+    "role-based",
+    "api-protection"
+  ],
+  "author": "Anshul Gupta",
+  "license": "ISC"
+}
