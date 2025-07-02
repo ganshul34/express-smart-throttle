@@ -1,22 +1,44 @@
 {
   "name": "express-smart-throttle",
-  "version": "0.0.1",
-  "description": "Advanced Express middleware for rate-limiting and throttling with per-route, per-role limits, delay-after, and Redis support.",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Smart, flexible, and role-based rate-limiting middleware for Express.js",
+  "main": "dist/middleware/smartThrottle.js",
+  "types": "dist/middleware/smartThrottle.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/middleware/smartThrottle.js",
+      "require": "./dist/middleware/smartThrottle.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node example/server.ts",
+    "build": "tsc",
+    "test": "vitest run",
+    "lint": "eslint . --ext .ts",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ganshul34/express-smart-throttle.git"
   },
   "keywords": [
     "express",
     "rate-limiter",
-    "rate-limiting",
-    "express-middleware",
+    "middleware",
     "throttle",
-    "redis",
-    "adaptive",
     "role-based",
-    "api-protection"
+    "rate-limiting"
   ],
   "author": "Anshul Gupta",
-  "license": "ISC"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "vitest": "^1.5.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "express": "^4.18.4"
+  }
 }
